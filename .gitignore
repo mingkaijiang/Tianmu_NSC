@@ -37,3 +37,10 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# ignore all input data
+*.csv
+
+# ignore output data
+*.pdf
+*.jpeg
