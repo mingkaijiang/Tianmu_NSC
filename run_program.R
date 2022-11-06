@@ -4,12 +4,15 @@
 
 ##########################################################################
 #### Step 1: basic set-up
+
+### create a folder called "data", and put the NSC_TEST_RESULT_ZHIWANG_11.04.csv file into this folder
+
+
 #### clear wk space
 rm(list=ls(all=TRUE))
 
 #### Source functions and packages
 source("prepare.R")
-
 
 ##########################################################################
 #### Step 2: read input data
