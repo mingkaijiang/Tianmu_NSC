@@ -121,7 +121,7 @@ p1 <- ggplot(sumDF, aes(x=MONTH, y=STARCH.mean, group=SPECIES))+
                   position=position_dodge(width=0.5), width=0.2) +
     geom_point(data=sumDF, aes(MONTH, STARCH.mean, fill=SPECIES),
                size=3, pch=21, position=position_dodge(width=0.5))+
-    facet_wrap(. ~ SITE_NUM+TISSUE, scales="free") +
+    facet_wrap(. ~ SITE_NUM+TISSUE, scales="free",ncol=5) +
     theme_linedraw() +
     theme(panel.grid.minor=element_blank(),
           axis.text.x=element_text(size=12),
@@ -138,7 +138,7 @@ p1 <- ggplot(sumDF, aes(x=MONTH, y=STARCH.mean, group=SPECIES))+
           plot.title = element_text(size=14, face="bold.italic", 
                                     hjust = 0.5))+
     ylab(expression(paste(Starch * " (mg C " * g^-1 * ")")))+
-    ylim(50,300)+
+    ylim(50,310)+
     scale_x_discrete(limits=c("JUL", "AUG", "SEP"))+
     xlab(expression(paste("Month"))); p1
 
@@ -150,7 +150,7 @@ p2 <- ggplot(sumDF, aes(x=MONTH, y=SUGAR.mean, group=SPECIES))+
                   position=position_dodge(width=0.5), width=0.2) +
     geom_point(data=sumDF, aes(MONTH, SUGAR.mean, fill=SPECIES),
                size=3, pch=21, position=position_dodge(width=0.5))+
-    facet_wrap(. ~ SITE_NUM+TISSUE, scales="free") +
+    facet_wrap(. ~ SITE_NUM+TISSUE, scales="free",ncol=5) +
     theme_linedraw() +
     theme(panel.grid.minor=element_blank(),
           axis.text.x=element_text(size=12),
